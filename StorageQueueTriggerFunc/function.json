@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "tgg-queue",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "name": "tggcollection",
+      "type": "cosmosDB",
+      "databaseName": "tgg",
+      "collectionName": "tgg-collection",
+      "createIfNotExists": true,
+      "connectionStringSetting": "CosmosDBConnectionString",
+      "direction": "out"
+  }
+    
+  ]
+}
